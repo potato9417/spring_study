@@ -1,0 +1,5 @@
+INFO  : org.springframework.web.context.ContextLoader -- main -- Root WebApplicationContext initialized in 302 ms : 2023-08-31 15:20:18.219
+INFO  : org.springframework.web.servlet.FrameworkServlet -- main -- Initializing Servlet 'appServlet' : 2023-08-31 15:20:18.306
+INFO  : org.springframework.web.servlet.FrameworkServlet -- main -- Completed initialization in 874 ms : 2023-08-31 15:20:19.180
+INFO  : com.java.demo.HomeController -- http-nio-8181-exec-6 -- Welcome home! The client locale is ko_KR. : 2023-08-31 15:21:18.955
+INFO  : com.java.demo.HomeController -- http-nio-8181-exec-9 -- Welcome home! The client locale is ko_KR. : 2023-08-31 15:22:09.739

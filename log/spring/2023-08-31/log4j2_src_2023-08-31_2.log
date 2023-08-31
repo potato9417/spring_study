@@ -1,0 +1,76 @@
+INFO  : org.springframework.web.context.ContextLoader -- main -- Root WebApplicationContext: initialization started : 2023-08-31 14:58:50.204
+INFO  : org.springframework.web.context.ContextLoader -- main -- Root WebApplicationContext initialized in 291 ms : 2023-08-31 14:58:50.504
+INFO  : org.springframework.web.servlet.FrameworkServlet -- main -- Initializing Servlet 'appServlet' : 2023-08-31 14:58:50.574
+INFO  : org.springframework.web.servlet.FrameworkServlet -- main -- Completed initialization in 883 ms : 2023-08-31 14:58:51.457
+INFO  : com.java.demo.HomeController -- http-nio-8181-exec-2 -- Welcome home! The client locale is ko_KR. : 2023-08-31 14:58:52.214
+INFO  : org.springframework.web.context.ContextLoader -- Catalina-utility-2 -- Root WebApplicationContext: initialization started : 2023-08-31 15:00:52.639
+INFO  : org.springframework.web.context.ContextLoader -- Catalina-utility-2 -- Root WebApplicationContext initialized in 238 ms : 2023-08-31 15:00:52.886
+INFO  : org.springframework.web.servlet.FrameworkServlet -- Catalina-utility-2 -- Initializing Servlet 'appServlet' : 2023-08-31 15:00:52.948
+INFO  : org.springframework.web.servlet.FrameworkServlet -- Catalina-utility-2 -- Completed initialization in 764 ms : 2023-08-31 15:00:53.712
+INFO  : org.springframework.web.context.ContextLoader -- Catalina-utility-1 -- Root WebApplicationContext: initialization started : 2023-08-31 15:01:37.999
+INFO  : org.springframework.web.context.ContextLoader -- Catalina-utility-1 -- Root WebApplicationContext initialized in 216 ms : 2023-08-31 15:01:38.223
+INFO  : org.springframework.web.servlet.FrameworkServlet -- Catalina-utility-1 -- Initializing Servlet 'appServlet' : 2023-08-31 15:01:38.282
+WARN  : org.springframework.context.support.AbstractApplicationContext -- Catalina-utility-1 -- Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'homeController' defined in file [C:\heejin\works\spring2\.metadata\.plugins\org.eclipse.wst.server.core\tmp0\wtpwebapps\demo4\WEB-INF\classes\com\java\demo\HomeController.class]: Instantiation of bean failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [com.java.demo.HomeController]: Constructor threw exception; nested exception is java.lang.Error: Unresolved compilation problem: 
+	sl cannot be resolved to a type
+ : 2023-08-31 15:01:38.959
+ERROR : org.springframework.web.servlet.FrameworkServlet -- Catalina-utility-1 -- Context initialization failed : 2023-08-31 15:01:38.960
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'homeController' defined in file [C:\heejin\works\spring2\.metadata\.plugins\org.eclipse.wst.server.core\tmp0\wtpwebapps\demo4\WEB-INF\classes\com\java\demo\HomeController.class]: Instantiation of bean failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [com.java.demo.HomeController]: Constructor threw exception; nested exception is java.lang.Error: Unresolved compilation problem: 
+	sl cannot be resolved to a type
+
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateBean(AbstractAutowireCapableBeanFactory.java:1323) ~[spring-beans-5.2.22.RELEASE.jar:5.2.22.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1218) ~[spring-beans-5.2.22.RELEASE.jar:5.2.22.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:556) ~[spring-beans-5.2.22.RELEASE.jar:5.2.22.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:516) ~[spring-beans-5.2.22.RELEASE.jar:5.2.22.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:324) ~[spring-beans-5.2.22.RELEASE.jar:5.2.22.RELEASE]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-5.2.22.RELEASE.jar:5.2.22.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:322) ~[spring-beans-5.2.22.RELEASE.jar:5.2.22.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202) ~[spring-beans-5.2.22.RELEASE.jar:5.2.22.RELEASE]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:897) ~[spring-beans-5.2.22.RELEASE.jar:5.2.22.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:879) ~[spring-context-5.2.22.RELEASE.jar:5.2.22.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:551) ~[spring-context-5.2.22.RELEASE.jar:5.2.22.RELEASE]
+	at org.springframework.web.servlet.FrameworkServlet.configureAndRefreshWebApplicationContext(FrameworkServlet.java:702) ~[spring-webmvc-5.2.22.RELEASE.jar:5.2.22.RELEASE]
+	at org.springframework.web.servlet.FrameworkServlet.createWebApplicationContext(FrameworkServlet.java:668) ~[spring-webmvc-5.2.22.RELEASE.jar:5.2.22.RELEASE]
+	at org.springframework.web.servlet.FrameworkServlet.createWebApplicationContext(FrameworkServlet.java:716) ~[spring-webmvc-5.2.22.RELEASE.jar:5.2.22.RELEASE]
+	at org.springframework.web.servlet.FrameworkServlet.initWebApplicationContext(FrameworkServlet.java:591) ~[spring-webmvc-5.2.22.RELEASE.jar:5.2.22.RELEASE]
+	at org.springframework.web.servlet.FrameworkServlet.initServletBean(FrameworkServlet.java:530) [spring-webmvc-5.2.22.RELEASE.jar:5.2.22.RELEASE]
+	at org.springframework.web.servlet.HttpServletBean.init(HttpServletBean.java:170) [spring-webmvc-5.2.22.RELEASE.jar:5.2.22.RELEASE]
+	at javax.servlet.GenericServlet.init(GenericServlet.java:143) [servlet-api.jar:4.0.FR]
+	at org.apache.catalina.core.StandardWrapper.initServlet(StandardWrapper.java:1106) [catalina.jar:9.0.80]
+	at org.apache.catalina.core.StandardWrapper.loadServlet(StandardWrapper.java:1063) [catalina.jar:9.0.80]
+	at org.apache.catalina.core.StandardWrapper.load(StandardWrapper.java:960) [catalina.jar:9.0.80]
+	at org.apache.catalina.core.StandardContext.loadOnStartup(StandardContext.java:4641) [catalina.jar:9.0.80]
+	at org.apache.catalina.core.StandardContext.startInternal(StandardContext.java:4948) [catalina.jar:9.0.80]
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:171) [catalina.jar:9.0.80]
+	at org.apache.catalina.core.StandardContext.reload(StandardContext.java:3581) [catalina.jar:9.0.80]
+	at org.apache.catalina.loader.WebappLoader.backgroundProcess(WebappLoader.java:309) [catalina.jar:9.0.80]
+	at org.apache.catalina.core.StandardContext.backgroundProcess(StandardContext.java:5276) [catalina.jar:9.0.80]
+	at org.apache.catalina.core.ContainerBase$ContainerBackgroundProcessor.processChildren(ContainerBase.java:1301) [catalina.jar:9.0.80]
+	at org.apache.catalina.core.ContainerBase$ContainerBackgroundProcessor.processChildren(ContainerBase.java:1305) [catalina.jar:9.0.80]
+	at org.apache.catalina.core.ContainerBase$ContainerBackgroundProcessor.processChildren(ContainerBase.java:1305) [catalina.jar:9.0.80]
+	at org.apache.catalina.core.ContainerBase$ContainerBackgroundProcessor.run(ContainerBase.java:1283) [catalina.jar:9.0.80]
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:515) [?:?]
+	at java.util.concurrent.FutureTask.runAndReset(FutureTask.java:305) [?:?]
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:305) [?:?]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128) [?:?]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628) [?:?]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) [tomcat-util.jar:9.0.80]
+	at java.lang.Thread.run(Thread.java:829) [?:?]
+Caused by: org.springframework.beans.BeanInstantiationException: Failed to instantiate [com.java.demo.HomeController]: Constructor threw exception; nested exception is java.lang.Error: Unresolved compilation problem: 
+	sl cannot be resolved to a type
+
+	at org.springframework.beans.BeanUtils.instantiateClass(BeanUtils.java:220) ~[spring-beans-5.2.22.RELEASE.jar:5.2.22.RELEASE]
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:87) ~[spring-beans-5.2.22.RELEASE.jar:5.2.22.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateBean(AbstractAutowireCapableBeanFactory.java:1315) ~[spring-beans-5.2.22.RELEASE.jar:5.2.22.RELEASE]
+	... 37 more
+Caused by: java.lang.Error: Unresolved compilation problem: 
+	sl cannot be resolved to a type
+
+	at com.java.demo.HomeController.<init>(HomeController.java:18) ~[classes/:?]
+	at jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method) ~[?:?]
+	at jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62) ~[?:?]
+	at jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45) ~[?:?]
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:490) ~[?:?]
+	at org.springframework.beans.BeanUtils.instantiateClass(BeanUtils.java:207) ~[spring-beans-5.2.22.RELEASE.jar:5.2.22.RELEASE]
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:87) ~[spring-beans-5.2.22.RELEASE.jar:5.2.22.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateBean(AbstractAutowireCapableBeanFactory.java:1315) ~[spring-beans-5.2.22.RELEASE.jar:5.2.22.RELEASE]
+	... 37 more

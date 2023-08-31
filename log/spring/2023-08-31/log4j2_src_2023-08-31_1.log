@@ -1,0 +1,22 @@
+INFO  : org.springframework.web.context.ContextLoader -- Catalina-utility-1 -- Root WebApplicationContext: initialization started : 2023-08-31 15:03:07.468
+INFO  : org.springframework.web.context.ContextLoader -- Catalina-utility-1 -- Root WebApplicationContext initialized in 219 ms : 2023-08-31 15:03:07.706
+INFO  : org.springframework.web.servlet.FrameworkServlet -- Catalina-utility-1 -- Initializing Servlet 'appServlet' : 2023-08-31 15:03:07.760
+INFO  : org.springframework.web.servlet.FrameworkServlet -- Catalina-utility-1 -- Completed initialization in 734 ms : 2023-08-31 15:03:08.494
+INFO  : org.springframework.web.context.ContextLoader -- Catalina-utility-2 -- Root WebApplicationContext: initialization started : 2023-08-31 15:03:53.293
+INFO  : org.springframework.web.context.ContextLoader -- Catalina-utility-2 -- Root WebApplicationContext initialized in 225 ms : 2023-08-31 15:03:53.526
+INFO  : org.springframework.web.servlet.FrameworkServlet -- Catalina-utility-2 -- Initializing Servlet 'appServlet' : 2023-08-31 15:03:53.581
+INFO  : org.springframework.web.servlet.FrameworkServlet -- Catalina-utility-2 -- Completed initialization in 690 ms : 2023-08-31 15:03:54.272
+INFO  : org.springframework.web.context.ContextLoader -- main -- Root WebApplicationContext: initialization started : 2023-08-31 15:18:09.787
+INFO  : org.springframework.web.context.ContextLoader -- main -- Root WebApplicationContext initialized in 296 ms : 2023-08-31 15:18:10.092
+INFO  : org.springframework.web.servlet.FrameworkServlet -- main -- Initializing Servlet 'appServlet' : 2023-08-31 15:18:10.163
+INFO  : org.springframework.web.servlet.FrameworkServlet -- main -- Completed initialization in 826 ms : 2023-08-31 15:18:10.989
+INFO  : com.java.demo.HomeController -- http-nio-8181-exec-3 -- Welcome home! The client locale is ko_KR. : 2023-08-31 15:18:11.720
+INFO  : org.springframework.web.context.ContextLoader -- Catalina-utility-1 -- Root WebApplicationContext: initialization started : 2023-08-31 15:18:55.728
+INFO  : org.springframework.web.context.ContextLoader -- Catalina-utility-1 -- Root WebApplicationContext initialized in 229 ms : 2023-08-31 15:18:55.966
+INFO  : org.springframework.web.servlet.FrameworkServlet -- Catalina-utility-1 -- Initializing Servlet 'appServlet' : 2023-08-31 15:18:56.024
+INFO  : org.springframework.web.servlet.FrameworkServlet -- Catalina-utility-1 -- Completed initialization in 688 ms : 2023-08-31 15:18:56.712
+INFO  : org.springframework.web.context.ContextLoader -- Catalina-utility-1 -- Root WebApplicationContext: initialization started : 2023-08-31 15:19:19.278
+INFO  : org.springframework.web.context.ContextLoader -- Catalina-utility-1 -- Root WebApplicationContext initialized in 246 ms : 2023-08-31 15:19:19.532
+INFO  : org.springframework.web.servlet.FrameworkServlet -- Catalina-utility-1 -- Initializing Servlet 'appServlet' : 2023-08-31 15:19:19.597
+INFO  : org.springframework.web.servlet.FrameworkServlet -- Catalina-utility-1 -- Completed initialization in 755 ms : 2023-08-31 15:19:20.352
+INFO  : org.springframework.web.context.ContextLoader -- main -- Root WebApplicationContext: initialization started : 2023-08-31 15:20:17.907
