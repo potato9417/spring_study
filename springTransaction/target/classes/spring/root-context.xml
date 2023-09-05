@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:p="http://www.springframework.org/schema/p"
+	xmlns:tx="http://www.springframework.org/schema/tx"
+	xmlns:aop="http://www.springframework.org/schema/aop"
+	xmlns:mvc="http://www.springframework.org/schema/mvc"
+	xmlns:jee="http://www.springframework.org/schema/jee"
+	xsi:schemaLocation="http://www.springframework.org/schema/jee http://www.springframework.org/schema/jee/spring-jee.xsd
+		http://www.springframework.org/schema/mvc http://www.springframework.org/schema/mvc/spring-mvc.xsd
+		http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd
+		http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop.xsd
+		http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx.xsd">
+
+	<!-- ~.propreties 파일을 사용할 경우 경로 설정 -->
+	<!--context:property-placeholder location="classpath*:*.properties" /-->
+
+	<!-- <tx:annotation-driven /> -->
+	
+	<!-- Addtional Trasactional Usage : @Transactional ~~ -->
+	<tx:annotation-driven transaction-manager="transactionManager" />
+	
+	<context:annotation-config />
+	
+	<context:component-scan base-package="com.javateam.springTransaction">
+		<context:include-filter type="annotation" expression="org.springframework.stereotype.Repository"/>
+		<context:include-filter type="annotation" expression="org.springframework.stereotype.Service"/>	
+	</context:component-scan>
+	
+	<!-- AOP ready -->
+	<aop:aspectj-autoproxy /> 
+ 	
+	<!-- Oracle JDBC Connection : apache DBCP2 -->
+	<!-- log4jdbc -->
+ 	<bean id="dataSource" class="org.apache.commons.dbcp2.BasicDataSource"  
+		    destroy-method="close"
+		    p:driverClassName="net.sf.log4jdbc.sql.jdbcapi.DriverSpy"
+		    p:url="jdbc:log4jdbc:oracle:thin:@localhost:1521:xe"
+		    p:username="java"
+		    p:password="java"
+		    p:maxTotal="10"
+		    p:maxIdle="5"
+		    p:maxWaitMillis="-1"
+		/> 
+
+	 <!-- MyBatis -->
+     <bean id="transactionManager"
+           class="org.springframework.jdbc.datasource.DataSourceTransactionManager">
+         <property name="dataSource" ref="dataSource" />
+         <property name="rollbackOnCommitFailure" value="true" />
+     </bean>
+     
+     <!-- <tx:jta-transaction-manager /> -->
+     
+     <!-- Transaction Advices -->
+     <!-- //////////////////////////////////////////////////////////////-->
+     
+     <tx:advice id="txAdvice" transaction-manager="transactionManager">
+     	<tx:attributes>
+     		<tx:method name="getMember" read-only="true" />
+     		<tx:method name="getAllMembers" read-only="true" />
+     		<tx:method name="insertMember" propagation="REQUIRED" />
+     		<tx:method name="updateMember" propagation="REQUIRED" />
+     		<tx:method name="deleteMember" propagation="REQUIRED" />
+     	</tx:attributes>
+     </tx:advice>
+     
+     <!-- //////////////////////////////////////////////////////////////-->
+     
+     <!-- AOP Transaction config -->
+	<aop:config>
+		<aop:advisor pointcut="execution(* *..TransactionServiceMyBatis.*(..))" 
+				     advice-ref="txAdvice"/>
+	</aop:config>
+	
+	<bean id="transactionTemplate" 
+		  class="org.springframework.transaction.support.TransactionTemplate"
+		  p:transactionManager-ref="transactionManager" />
+
+     <bean id="sqlSessionFactory" 
+     	   class="org.mybatis.spring.SqlSessionFactoryBean">
+         <property name="dataSource" ref="dataSource" />
+         <property name="typeAliasesPackage" 
+         		   value="com.javateam.springTransaction.domain" />
+         <property name="mapperLocations" 
+         		   value="classpath:/mapper/*.xml" />
+      	 <property name="configuration">
+      	 	<bean class="org.apache.ibatis.session.Configuration">
+      	 		<property name="mapUnderscoreToCamelCase" value="true" />
+      	 	</bean>
+      	 </property>	   
+     </bean>
+     
+     <!-- 
+     <bean id="sqlSessionFactory" class="org.mybatis.spring.SqlSessionFactoryBean">
+	   <property name="dataSource" ref="dataSource" />
+	   <property name="transactionFactory">
+	      <bean class="org.apache.ibatis.transaction.managed.ManagedTransactionFactory" />
+	   </property>  
+	   <property name="configuration">
+     	 	<bean class="org.apache.ibatis.session.Configuration">
+     	 		<property name="mapUnderscoreToCamelCase" value="true" />
+     	 	</bean>
+       </property>
+	 </bean> 
+	 -->
+
+     <bean id="sqlSession" 
+     	   class="org.mybatis.spring.SqlSessionTemplate"> 
+         <constructor-arg name="sqlSessionFactory" 
+         				  ref="sqlSessionFactory" />
+     </bean>
+
+</beans>

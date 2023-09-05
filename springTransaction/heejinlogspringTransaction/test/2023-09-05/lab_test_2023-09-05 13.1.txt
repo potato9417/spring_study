@@ -1,0 +1,2 @@
+2023-09-05 13:04:05 [INFO ] [SpringContextShutdownHook] [jdbc.connection] - 2. Connection closed  org.apache.commons.dbcp2.DelegatingConnection.closeInternal(DelegatingConnection.java:176)
+2023-09-05 13:04:05 [DEBUG] [SpringContextShutdownHook] [jdbc.connection] - open connections:  none

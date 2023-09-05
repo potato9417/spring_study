@@ -1,0 +1,61 @@
+2023-09-05 11:32:32 [DEBUG] [main] [c.j.s.m.MemberMapper.deleteMember] - ==>  Preparing: DELETE member_temp2 WHERE id=?
+2023-09-05 11:32:32 [DEBUG] [main] [c.j.s.m.MemberMapper.deleteMember] - ==> Parameters: spring1234(String)
+2023-09-05 11:32:32 [INFO ] [main] [o.s.t.c.t.TransactionContext] - Committed transaction for test: [DefaultTestContext@3a3ed300 testClass = DeleteTest, testInstance = com.javateam.springTransaction.test.DeleteTest@1984212d, testMethod = testTransaction@DeleteTest, testException = org.springframework.jdbc.BadSqlGrammarException: 
+### Error updating database.  Cause: java.sql.SQLSyntaxErrorException: ORA-00942: table or view does not exist
+
+### The error may exist in file [C:\heejin\works\spring2\springTransaction\target\classes\mapper\MemberMapper.xml]
+### The error may involve com.javateam.springTransaction.mapper.MemberMapper.deleteMember-Inline
+### The error occurred while setting parameters
+### SQL: DELETE member_temp2 WHERE id=?
+### Cause: java.sql.SQLSyntaxErrorException: ORA-00942: table or view does not exist
+
+; bad SQL grammar []; nested exception is java.sql.SQLSyntaxErrorException: ORA-00942: table or view does not exist
+, mergedContextConfiguration = [WebMergedContextConfiguration@39f5b723 testClass = DeleteTest, locations = '{file:src/main/webapp/WEB-INF/spring/appServlet/servlet-context.xml, file:src/main/resources/spring/root-context.xml}', classes = '{}', contextInitializerClasses = '[]', activeProfiles = '{}', propertySourceLocations = '{}', propertySourceProperties = '{}', contextCustomizers = set[[empty]], resourceBasePath = 'src/main/webapp', contextLoader = 'org.springframework.test.context.web.WebDelegatingSmartContextLoader', parent = [null]], attributes = map['org.springframework.test.context.web.ServletTestExecutionListener.populatedRequestContextHolder' -> true, 'org.springframework.test.context.web.ServletTestExecutionListener.resetRequestContextHolder' -> true]]
+2023-09-05 11:32:32 [INFO ] [main] [o.s.t.c.t.TransactionContext] - Began transaction (1) for test context [DefaultTestContext@7b2bf745 testClass = ReadTest, testInstance = com.javateam.springTransaction.test.ReadTest@6fe595dc, testMethod = testGetAllMembers@ReadTest, testException = [null], mergedContextConfiguration = [WebMergedContextConfiguration@5af5d76f testClass = ReadTest, locations = '{file:src/main/webapp/WEB-INF/spring/appServlet/servlet-context.xml, file:src/main/resources/spring/root-context.xml}', classes = '{}', contextInitializerClasses = '[]', activeProfiles = '{}', propertySourceLocations = '{}', propertySourceProperties = '{}', contextCustomizers = set[[empty]], resourceBasePath = 'src/main/webapp', contextLoader = 'org.springframework.test.context.web.WebDelegatingSmartContextLoader', parent = [null]], attributes = map['org.springframework.test.context.web.ServletTestExecutionListener.populatedRequestContextHolder' -> true, 'org.springframework.test.context.web.ServletTestExecutionListener.resetRequestContextHolder' -> true]]; transaction manager [org.springframework.jdbc.datasource.DataSourceTransactionManager@4eaa375c]; rollback [true]
+2023-09-05 11:32:32 [INFO ] [main] [c.j.springTransaction.test.ReadTest] - ######### 트랜잭션 read 테스트 ##############
+2023-09-05 11:32:32 [INFO ] [main] [c.j.s.dao.TransactionDAOMyBatisImpl] - dao getAllMembers
+2023-09-05 11:32:32 [DEBUG] [main] [c.j.s.m.MemberMapper.getAllMembers] - ==>  Preparing: SELECT * FROM member_temp2
+2023-09-05 11:32:32 [DEBUG] [main] [c.j.s.m.MemberMapper.getAllMembers] - ==> Parameters: 
+2023-09-05 11:32:32 [INFO ] [main] [o.s.t.c.t.TransactionContext] - Rolled back transaction for test: [DefaultTestContext@7b2bf745 testClass = ReadTest, testInstance = com.javateam.springTransaction.test.ReadTest@6fe595dc, testMethod = testGetAllMembers@ReadTest, testException = org.springframework.jdbc.BadSqlGrammarException: 
+### Error querying database.  Cause: java.sql.SQLSyntaxErrorException: ORA-00942: table or view does not exist
+
+### The error may exist in file [C:\heejin\works\spring2\springTransaction\target\classes\mapper\MemberMapper.xml]
+### The error may involve defaultParameterMap
+### The error occurred while setting parameters
+### SQL: SELECT * FROM member_temp2
+### Cause: java.sql.SQLSyntaxErrorException: ORA-00942: table or view does not exist
+
+; bad SQL grammar []; nested exception is java.sql.SQLSyntaxErrorException: ORA-00942: table or view does not exist
+, mergedContextConfiguration = [WebMergedContextConfiguration@5af5d76f testClass = ReadTest, locations = '{file:src/main/webapp/WEB-INF/spring/appServlet/servlet-context.xml, file:src/main/resources/spring/root-context.xml}', classes = '{}', contextInitializerClasses = '[]', activeProfiles = '{}', propertySourceLocations = '{}', propertySourceProperties = '{}', contextCustomizers = set[[empty]], resourceBasePath = 'src/main/webapp', contextLoader = 'org.springframework.test.context.web.WebDelegatingSmartContextLoader', parent = [null]], attributes = map['org.springframework.test.context.web.ServletTestExecutionListener.populatedRequestContextHolder' -> true, 'org.springframework.test.context.web.ServletTestExecutionListener.resetRequestContextHolder' -> true]]
+2023-09-05 11:32:32 [INFO ] [main] [o.s.t.c.t.TransactionContext] - Began transaction (1) for test context [DefaultTestContext@7b2bf745 testClass = ReadTest, testInstance = com.javateam.springTransaction.test.ReadTest@28279a49, testMethod = testGetMember@ReadTest, testException = [null], mergedContextConfiguration = [WebMergedContextConfiguration@5af5d76f testClass = ReadTest, locations = '{file:src/main/webapp/WEB-INF/spring/appServlet/servlet-context.xml, file:src/main/resources/spring/root-context.xml}', classes = '{}', contextInitializerClasses = '[]', activeProfiles = '{}', propertySourceLocations = '{}', propertySourceProperties = '{}', contextCustomizers = set[[empty]], resourceBasePath = 'src/main/webapp', contextLoader = 'org.springframework.test.context.web.WebDelegatingSmartContextLoader', parent = [null]], attributes = map['org.springframework.test.context.web.ServletTestExecutionListener.populatedRequestContextHolder' -> true, 'org.springframework.test.context.web.ServletTestExecutionListener.resetRequestContextHolder' -> true]]; transaction manager [org.springframework.jdbc.datasource.DataSourceTransactionManager@4eaa375c]; rollback [true]
+2023-09-05 11:32:32 [INFO ] [main] [c.j.springTransaction.test.ReadTest] - ######### 트랜잭션 read 테스트-2 ##############
+2023-09-05 11:32:32 [INFO ] [main] [c.j.s.dao.TransactionDAOMyBatisImpl] - dao getMember
+2023-09-05 11:32:32 [DEBUG] [main] [c.j.s.mapper.MemberMapper.getMember] - ==>  Preparing: SELECT * FROM member_temp2 WHERE id=?
+2023-09-05 11:32:32 [DEBUG] [main] [c.j.s.mapper.MemberMapper.getMember] - ==> Parameters: spring1234(String)
+2023-09-05 11:32:32 [INFO ] [main] [o.s.t.c.t.TransactionContext] - Rolled back transaction for test: [DefaultTestContext@7b2bf745 testClass = ReadTest, testInstance = com.javateam.springTransaction.test.ReadTest@28279a49, testMethod = testGetMember@ReadTest, testException = org.springframework.jdbc.BadSqlGrammarException: 
+### Error querying database.  Cause: java.sql.SQLSyntaxErrorException: ORA-00942: table or view does not exist
+
+### The error may exist in file [C:\heejin\works\spring2\springTransaction\target\classes\mapper\MemberMapper.xml]
+### The error may involve com.javateam.springTransaction.mapper.MemberMapper.getMember-Inline
+### The error occurred while setting parameters
+### SQL: SELECT * FROM member_temp2 WHERE id=?
+### Cause: java.sql.SQLSyntaxErrorException: ORA-00942: table or view does not exist
+
+; bad SQL grammar []; nested exception is java.sql.SQLSyntaxErrorException: ORA-00942: table or view does not exist
+, mergedContextConfiguration = [WebMergedContextConfiguration@5af5d76f testClass = ReadTest, locations = '{file:src/main/webapp/WEB-INF/spring/appServlet/servlet-context.xml, file:src/main/resources/spring/root-context.xml}', classes = '{}', contextInitializerClasses = '[]', activeProfiles = '{}', propertySourceLocations = '{}', propertySourceProperties = '{}', contextCustomizers = set[[empty]], resourceBasePath = 'src/main/webapp', contextLoader = 'org.springframework.test.context.web.WebDelegatingSmartContextLoader', parent = [null]], attributes = map['org.springframework.test.context.web.ServletTestExecutionListener.populatedRequestContextHolder' -> true, 'org.springframework.test.context.web.ServletTestExecutionListener.resetRequestContextHolder' -> true]]
+2023-09-05 11:32:32 [INFO ] [main] [o.s.t.c.t.TransactionContext] - Began transaction (1) for test context [DefaultTestContext@78a8978a testClass = InsertTest, testInstance = com.javateam.springTransaction.test.InsertTest@f171912, testMethod = testTransaction@InsertTest, testException = [null], mergedContextConfiguration = [WebMergedContextConfiguration@7d4d8579 testClass = InsertTest, locations = '{file:src/main/webapp/WEB-INF/spring/appServlet/servlet-context.xml, file:src/main/resources/spring/root-context.xml}', classes = '{}', contextInitializerClasses = '[]', activeProfiles = '{}', propertySourceLocations = '{}', propertySourceProperties = '{}', contextCustomizers = set[[empty]], resourceBasePath = 'src/main/webapp', contextLoader = 'org.springframework.test.context.web.WebDelegatingSmartContextLoader', parent = [null]], attributes = map['org.springframework.test.context.web.ServletTestExecutionListener.populatedRequestContextHolder' -> true, 'org.springframework.test.context.web.ServletTestExecutionListener.resetRequestContextHolder' -> true]]; transaction manager [org.springframework.jdbc.datasource.DataSourceTransactionManager@4eaa375c]; rollback [false]
+2023-09-05 11:32:32 [INFO ] [main] [c.j.s.test.InsertTest] - ######### 트랜잭션 insert 테스트 ##############
+2023-09-05 11:32:32 [INFO ] [main] [c.j.s.dao.TransactionDAOMyBatisImpl] - dao insertMember
+2023-09-05 11:32:32 [DEBUG] [main] [c.j.s.m.MemberMapper.insertMember] - ==>  Preparing: INSERT INTO member_temp2 VALUES (?, ?, ?, ?, ?)
+2023-09-05 11:32:32 [DEBUG] [main] [c.j.s.m.MemberMapper.insertMember] - ==> Parameters: spring1234(String), 11111111(String), 스프링맨(String), 구로디지털단지(String), 2023-09-05(Date)
+2023-09-05 11:32:32 [INFO ] [main] [o.s.t.c.t.TransactionContext] - Committed transaction for test: [DefaultTestContext@78a8978a testClass = InsertTest, testInstance = com.javateam.springTransaction.test.InsertTest@f171912, testMethod = testTransaction@InsertTest, testException = org.springframework.jdbc.BadSqlGrammarException: 
+### Error updating database.  Cause: java.sql.SQLSyntaxErrorException: ORA-00942: table or view does not exist
+
+### The error may exist in file [C:\heejin\works\spring2\springTransaction\target\classes\mapper\MemberMapper.xml]
+### The error may involve com.javateam.springTransaction.mapper.MemberMapper.insertMember-Inline
+### The error occurred while setting parameters
+### SQL: INSERT INTO member_temp2    VALUES (?,       ?,       ?,       ?,       ?)
+### Cause: java.sql.SQLSyntaxErrorException: ORA-00942: table or view does not exist
+
+; bad SQL grammar []; nested exception is java.sql.SQLSyntaxErrorException: ORA-00942: table or view does not exist
+, mergedContextConfiguration = [WebMergedContextConfiguration@7d4d8579 testClass = InsertTest, locations = '{file:src/main/webapp/WEB-INF/spring/appServlet/servlet-context.xml, file:src/main/resources/spring/root-context.xml}', classes = '{}', contextInitializerClasses = '[]', activeProfiles = '{}', propertySourceLocations = '{}', propertySourceProperties = '{}', contextCustomizers = set[[empty]], resourceBasePath = 'src/main/webapp', contextLoader = 'org.springframework.test.context.web.WebDelegatingSmartContextLoader', parent = [null]], attributes = map['org.springframework.test.context.web.ServletTestExecutionListener.populatedRequestContextHolder' -> true, 'org.springframework.test.context.web.ServletTestExecutionListener.resetRequestContextHolder' -> true]]

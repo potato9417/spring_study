@@ -1,0 +1,74 @@
+2023-09-05 16:56:34 [DEBUG] [main] [log4jdbc.debug] - log4jdbc-logj2 properties initialization...
+2023-09-05 16:56:34 [DEBUG] [main] [log4jdbc.debug] - Using logger: net.sf.log4jdbc.log.slf4j.Slf4jSpyLogDelegator
+2023-09-05 16:56:34 [DEBUG] [main] [log4jdbc.debug] - x log4jdbc.debug.stack.prefix is not defined
+2023-09-05 16:56:34 [DEBUG] [main] [log4jdbc.debug] - x log4jdbc.sqltiming.warn.threshold is not defined
+2023-09-05 16:56:34 [DEBUG] [main] [log4jdbc.debug] - x log4jdbc.sqltiming.error.threshold is not defined
+2023-09-05 16:56:34 [DEBUG] [main] [log4jdbc.debug] - x log4jdbc.dump.booleanastruefalse is not defined (using default value false)
+2023-09-05 16:56:34 [DEBUG] [main] [log4jdbc.debug] - x log4jdbc.dump.sql.maxlinelength is not defined (using default of 90)
+2023-09-05 16:56:34 [DEBUG] [main] [log4jdbc.debug] - x log4jdbc.dump.fulldebugstacktrace is not defined (using default value false)
+2023-09-05 16:56:34 [DEBUG] [main] [log4jdbc.debug] - x log4jdbc.statement.warn is not defined (using default value false)
+2023-09-05 16:56:34 [DEBUG] [main] [log4jdbc.debug] - x log4jdbc.dump.sql.select is not defined (using default value true)
+2023-09-05 16:56:34 [DEBUG] [main] [log4jdbc.debug] - x log4jdbc.dump.sql.insert is not defined (using default value true)
+2023-09-05 16:56:34 [DEBUG] [main] [log4jdbc.debug] - x log4jdbc.dump.sql.update is not defined (using default value true)
+2023-09-05 16:56:34 [DEBUG] [main] [log4jdbc.debug] - x log4jdbc.dump.sql.delete is not defined (using default value true)
+2023-09-05 16:56:34 [DEBUG] [main] [log4jdbc.debug] - x log4jdbc.dump.sql.create is not defined (using default value true)
+2023-09-05 16:56:34 [DEBUG] [main] [log4jdbc.debug] - x log4jdbc.dump.sql.addsemicolon is not defined (using default value false)
+2023-09-05 16:56:34 [DEBUG] [main] [log4jdbc.debug] - x log4jdbc.auto.load.popular.drivers is not defined (using default value true)
+2023-09-05 16:56:34 [DEBUG] [main] [log4jdbc.debug] - x log4jdbc.drivers is not defined
+2023-09-05 16:56:34 [DEBUG] [main] [log4jdbc.debug] - x log4jdbc.trim.sql is not defined (using default value true)
+2023-09-05 16:56:34 [DEBUG] [main] [log4jdbc.debug] - x log4jdbc.trim.sql.extrablanklines is not defined (using default value true)
+2023-09-05 16:56:34 [DEBUG] [main] [log4jdbc.debug] - x log4jdbc.suppress.generated.keys.exception is not defined (using default value false)
+2023-09-05 16:56:34 [DEBUG] [main] [log4jdbc.debug] - log4jdbc-logj2 properties initialization done.
+2023-09-05 16:56:34 [DEBUG] [main] [log4jdbc.debug] - DriverSpy intialization...
+2023-09-05 16:56:34 [DEBUG] [main] [log4jdbc.debug] -   FOUND DRIVER oracle.jdbc.OracleDriver
+2023-09-05 16:56:34 [DEBUG] [main] [log4jdbc.debug] -   FOUND DRIVER oracle.jdbc.driver.OracleDriver
+2023-09-05 16:56:34 [DEBUG] [main] [log4jdbc.debug] - DriverSpy intialization done.
+2023-09-05 16:56:35 [INFO ] [main] [jdbc.connection] - 1. Connection opened  org.apache.commons.dbcp2.DriverConnectionFactory.createConnection(DriverConnectionFactory.java:52)
+2023-09-05 16:56:35 [DEBUG] [main] [jdbc.connection] - open connections:  1 (1)
+2023-09-05 16:56:35 [INFO ] [main] [jdbc.connection] - 1. Connection closed  org.apache.commons.dbcp2.DelegatingConnection.closeInternal(DelegatingConnection.java:176)
+2023-09-05 16:56:35 [DEBUG] [main] [jdbc.connection] - open connections:  none
+2023-09-05 16:56:35 [INFO ] [main] [jdbc.connection] - 2. Connection opened  org.apache.commons.dbcp2.DriverConnectionFactory.createConnection(DriverConnectionFactory.java:52)
+2023-09-05 16:56:35 [DEBUG] [main] [jdbc.connection] - open connections:  2 (1)
+2023-09-05 16:56:35 [INFO ] [main] [o.s.t.c.t.TransactionContext] - Began transaction (1) for test context [DefaultTestContext@2819c460 testClass = InsertServiceTest, testInstance = com.javateam.springTransaction.service.test.InsertServiceTest@30364216, testMethod = testInsertMember2@InsertServiceTest, testException = [null], mergedContextConfiguration = [MergedContextConfiguration@38bb9d7a testClass = InsertServiceTest, locations = '{file:src/main/resources/spring/root-context.xml}', classes = '{}', contextInitializerClasses = '[]', activeProfiles = '{}', propertySourceLocations = '{}', propertySourceProperties = '{}', contextCustomizers = set[[empty]], contextLoader = 'org.springframework.test.context.support.DelegatingSmartContextLoader', parent = [null]], attributes = map[[empty]]]; transaction manager [org.springframework.jdbc.datasource.DataSourceTransactionManager@1e8ab90f]; rollback [true]
+2023-09-05 16:56:35 [INFO ] [main] [c.j.s.service.test.InsertServiceTest] - service insertMember2 test
+2023-09-05 16:56:35 [INFO ] [main] [c.j.s.service.aop.MyBatisAdvice] - AOP Around begin : insertMember2 메소드를 시작합니다-1.
+2023-09-05 16:56:35 [INFO ] [main] [c.j.s.service.aop.MyBatisAdvice] - 
+
+#######################################################################################################################################################################################################
+
+2023-09-05 16:56:35 [INFO ] [main] [c.j.s.service.aop.MyBatisAdvice] - 회원관리모듈 시작
+2023-09-05 16:56:35 [INFO ] [main] [c.j.s.service.aop.MyBatisAdvice] - 인자[MemberVO(id=spring111, pw=123456789, name=자바맨, address=신도림, joindate=2023-09-05)]으로 insertMember2 메소드를 시작합니다.
+2023-09-05 16:56:35 [INFO ] [main] [c.j.s.service.aop.MyBatisAdvice2] - AOP Around begin : insertMember2 메소드를 시작합니다-2.
+2023-09-05 16:56:35 [INFO ] [main] [c.j.s.service.aop.MyBatisAdvice2] - AOP : 회원 모듈 실행 시작 !
+2023-09-05 16:56:35 [INFO ] [main] [c.j.s.dao.TransactionDAOMyBatisImpl] - dao insertMember
+2023-09-05 16:56:35 [DEBUG] [main] [c.j.s.m.MemberMapper.insertMember] - ==>  Preparing: INSERT INTO member_temp2 VALUES (?, ?, ?, ?, ?)
+2023-09-05 16:56:35 [DEBUG] [main] [c.j.s.m.MemberMapper.insertMember] - ==> Parameters: spring111(String), 123456789(String), 자바맨(String), 신도림(String), 2023-09-05(Date)
+2023-09-05 16:56:35 [DEBUG] [main] [c.j.s.m.MemberMapper.insertMember] - <==    Updates: 1
+2023-09-05 16:56:35 [INFO ] [main] [c.j.s.s.TransactionServiceMyBatisImpl] - service insertMember2 성공
+2023-09-05 16:56:35 [INFO ] [main] [c.j.s.s.TransactionServiceMyBatisImpl] - service insertMember2 : true
+2023-09-05 16:56:35 [INFO ] [main] [c.j.s.service.aop.MyBatisAdvice2] - AOP : 회원 모듈 실행 끝 !
+2023-09-05 16:56:35 [INFO ] [main] [c.j.s.service.aop.MyBatisAdvice2] - AOP Around end : insertMember2 메소드를 끝냈습니다-2.
+2023-09-05 16:56:35 [INFO ] [main] [c.j.s.service.aop.MyBatisAdvice] - insertMember2 메소드를 끝냈습니다.
+2023-09-05 16:56:35 [INFO ] [main] [c.j.s.service.aop.MyBatisAdvice] - 
+
+#######################################################################################################################################################################################################
+
+2023-09-05 16:56:35 [INFO ] [main] [c.j.s.service.aop.MyBatisAdvice] - AOP Around end : insertMember2 메소드를 끝냈습니다-1.
+2023-09-05 16:56:35 [INFO ] [main] [o.s.t.c.t.TransactionContext] - Rolled back transaction for test: [DefaultTestContext@2819c460 testClass = InsertServiceTest, testInstance = com.javateam.springTransaction.service.test.InsertServiceTest@30364216, testMethod = testInsertMember2@InsertServiceTest, testException = [null], mergedContextConfiguration = [MergedContextConfiguration@38bb9d7a testClass = InsertServiceTest, locations = '{file:src/main/resources/spring/root-context.xml}', classes = '{}', contextInitializerClasses = '[]', activeProfiles = '{}', propertySourceLocations = '{}', propertySourceProperties = '{}', contextCustomizers = set[[empty]], contextLoader = 'org.springframework.test.context.support.DelegatingSmartContextLoader', parent = [null]], attributes = map[[empty]]]
+2023-09-05 16:56:35 [INFO ] [SpringContextShutdownHook] [jdbc.connection] - 2. Connection closed  org.apache.commons.dbcp2.DelegatingConnection.closeInternal(DelegatingConnection.java:176)
+2023-09-05 16:56:35 [DEBUG] [SpringContextShutdownHook] [jdbc.connection] - open connections:  none
+2023-09-05 16:56:55 [INFO ] [main] [o.s.t.c.w.WebTestContextBootstrapper] - Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener, org.springframework.test.context.event.EventPublishingTestExecutionListener]
+2023-09-05 16:56:55 [INFO ] [main] [o.s.t.c.w.WebTestContextBootstrapper] - Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@4dc27487, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@6a4f1a55, org.springframework.test.context.support.DependencyInjectionTestExecutionListener@7dfd3c81, org.springframework.test.context.support.DirtiesContextTestExecutionListener@2584b82d, org.springframework.test.context.transaction.TransactionalTestExecutionListener@7bbc8656, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@6933b6c6, org.springframework.test.context.event.EventPublishingTestExecutionListener@7d3e8655]
+2023-09-05 16:56:57 [DEBUG] [main] [log4jdbc.debug] - log4jdbc-logj2 properties initialization...
+2023-09-05 16:56:57 [DEBUG] [main] [log4jdbc.debug] - Using logger: net.sf.log4jdbc.log.slf4j.Slf4jSpyLogDelegator
+2023-09-05 16:56:57 [DEBUG] [main] [log4jdbc.debug] - x log4jdbc.debug.stack.prefix is not defined
+2023-09-05 16:56:57 [DEBUG] [main] [log4jdbc.debug] - x log4jdbc.sqltiming.warn.threshold is not defined
+2023-09-05 16:56:57 [DEBUG] [main] [log4jdbc.debug] - x log4jdbc.sqltiming.error.threshold is not defined
+2023-09-05 16:56:57 [DEBUG] [main] [log4jdbc.debug] - x log4jdbc.dump.booleanastruefalse is not defined (using default value false)
+2023-09-05 16:56:57 [DEBUG] [main] [log4jdbc.debug] - x log4jdbc.dump.sql.maxlinelength is not defined (using default of 90)
+2023-09-05 16:56:57 [DEBUG] [main] [log4jdbc.debug] - x log4jdbc.dump.fulldebugstacktrace is not defined (using default value false)
+2023-09-05 16:56:57 [DEBUG] [main] [log4jdbc.debug] - x log4jdbc.statement.warn is not defined (using default value false)
+2023-09-05 16:56:57 [DEBUG] [main] [log4jdbc.debug] - x log4jdbc.dump.sql.select is not defined (using default value true)
+2023-09-05 16:56:57 [DEBUG] [main] [log4jdbc.debug] - x log4jdbc.dump.sql.insert is not defined (using default value true)
+2023-09-05 16:56:57 [DEBUG] [main] [log4jdbc.debug] - x log4jdbc.dump.sql.update is not defined (using default value true)
+2023-09-05 16:56:57 [DEBUG] [main] [log4jdbc.debug] - x log4jdbc.dump.sql.delete is not defined (using default value true)

@@ -1,0 +1,27 @@
+2023-09-05 16:56:57 [DEBUG] [main] [log4jdbc.debug] - x log4jdbc.dump.sql.create is not defined (using default value true)
+2023-09-05 16:56:57 [DEBUG] [main] [log4jdbc.debug] - x log4jdbc.dump.sql.addsemicolon is not defined (using default value false)
+2023-09-05 16:56:57 [DEBUG] [main] [log4jdbc.debug] - x log4jdbc.auto.load.popular.drivers is not defined (using default value true)
+2023-09-05 16:56:57 [DEBUG] [main] [log4jdbc.debug] - x log4jdbc.drivers is not defined
+2023-09-05 16:56:57 [DEBUG] [main] [log4jdbc.debug] - x log4jdbc.trim.sql is not defined (using default value true)
+2023-09-05 16:56:57 [DEBUG] [main] [log4jdbc.debug] - x log4jdbc.trim.sql.extrablanklines is not defined (using default value true)
+2023-09-05 16:56:57 [DEBUG] [main] [log4jdbc.debug] - x log4jdbc.suppress.generated.keys.exception is not defined (using default value false)
+2023-09-05 16:56:57 [DEBUG] [main] [log4jdbc.debug] - log4jdbc-logj2 properties initialization done.
+2023-09-05 16:56:57 [DEBUG] [main] [log4jdbc.debug] - DriverSpy intialization...
+2023-09-05 16:56:57 [DEBUG] [main] [log4jdbc.debug] -   FOUND DRIVER oracle.jdbc.OracleDriver
+2023-09-05 16:56:57 [DEBUG] [main] [log4jdbc.debug] -   FOUND DRIVER oracle.jdbc.driver.OracleDriver
+2023-09-05 16:56:57 [DEBUG] [main] [log4jdbc.debug] - DriverSpy intialization done.
+2023-09-05 16:56:58 [INFO ] [main] [jdbc.connection] - 1. Connection opened  org.apache.commons.dbcp2.DriverConnectionFactory.createConnection(DriverConnectionFactory.java:52)
+2023-09-05 16:56:58 [DEBUG] [main] [jdbc.connection] - open connections:  1 (1)
+2023-09-05 16:56:58 [INFO ] [main] [jdbc.connection] - 1. Connection closed  org.apache.commons.dbcp2.DelegatingConnection.closeInternal(DelegatingConnection.java:176)
+2023-09-05 16:56:58 [DEBUG] [main] [jdbc.connection] - open connections:  none
+2023-09-05 16:56:58 [INFO ] [main] [jdbc.connection] - 2. Connection opened  org.apache.commons.dbcp2.DriverConnectionFactory.createConnection(DriverConnectionFactory.java:52)
+2023-09-05 16:56:58 [DEBUG] [main] [jdbc.connection] - open connections:  2 (1)
+2023-09-05 16:56:58 [INFO ] [main] [o.s.t.c.t.TransactionContext] - Began transaction (1) for test context [DefaultTestContext@1984212d testClass = InsertTest, testInstance = com.javateam.springTransaction.test.InsertTest@39f5b723, testMethod = testTransaction@InsertTest, testException = [null], mergedContextConfiguration = [WebMergedContextConfiguration@4eaa375c testClass = InsertTest, locations = '{file:src/main/webapp/WEB-INF/spring/appServlet/servlet-context.xml, file:src/main/resources/spring/root-context.xml}', classes = '{}', contextInitializerClasses = '[]', activeProfiles = '{}', propertySourceLocations = '{}', propertySourceProperties = '{}', contextCustomizers = set[[empty]], resourceBasePath = 'src/main/webapp', contextLoader = 'org.springframework.test.context.web.WebDelegatingSmartContextLoader', parent = [null]], attributes = map['org.springframework.test.context.web.ServletTestExecutionListener.populatedRequestContextHolder' -> true, 'org.springframework.test.context.web.ServletTestExecutionListener.resetRequestContextHolder' -> true]]; transaction manager [org.springframework.jdbc.datasource.DataSourceTransactionManager@2404b5a]; rollback [false]
+2023-09-05 16:56:58 [INFO ] [main] [c.j.s.test.InsertTest] - ######### 트랜잭션 insert 테스트 ##############
+2023-09-05 16:56:58 [INFO ] [main] [c.j.s.dao.TransactionDAOMyBatisImpl] - dao insertMember
+2023-09-05 16:56:58 [DEBUG] [main] [c.j.s.m.MemberMapper.insertMember] - ==>  Preparing: INSERT INTO member_temp2 VALUES (?, ?, ?, ?, ?)
+2023-09-05 16:56:58 [DEBUG] [main] [c.j.s.m.MemberMapper.insertMember] - ==> Parameters: spring1234(String), 11111111(String), 스프링맨(String), 구로디지털단지(String), 2023-09-05(Date)
+2023-09-05 16:56:58 [DEBUG] [main] [c.j.s.m.MemberMapper.insertMember] - <==    Updates: 1
+2023-09-05 16:56:58 [INFO ] [main] [o.s.t.c.t.TransactionContext] - Committed transaction for test: [DefaultTestContext@1984212d testClass = InsertTest, testInstance = com.javateam.springTransaction.test.InsertTest@39f5b723, testMethod = testTransaction@InsertTest, testException = [null], mergedContextConfiguration = [WebMergedContextConfiguration@4eaa375c testClass = InsertTest, locations = '{file:src/main/webapp/WEB-INF/spring/appServlet/servlet-context.xml, file:src/main/resources/spring/root-context.xml}', classes = '{}', contextInitializerClasses = '[]', activeProfiles = '{}', propertySourceLocations = '{}', propertySourceProperties = '{}', contextCustomizers = set[[empty]], resourceBasePath = 'src/main/webapp', contextLoader = 'org.springframework.test.context.web.WebDelegatingSmartContextLoader', parent = [null]], attributes = map['org.springframework.test.context.web.ServletTestExecutionListener.populatedRequestContextHolder' -> true, 'org.springframework.test.context.web.ServletTestExecutionListener.resetRequestContextHolder' -> true]]
+2023-09-05 16:56:58 [INFO ] [SpringContextShutdownHook] [jdbc.connection] - 2. Connection closed  org.apache.commons.dbcp2.DelegatingConnection.closeInternal(DelegatingConnection.java:176)
+2023-09-05 16:56:58 [DEBUG] [SpringContextShutdownHook] [jdbc.connection] - open connections:  none

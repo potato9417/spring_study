@@ -1,0 +1,18 @@
+2023-09-05 11:32:32 [INFO ] [main] [o.s.t.c.t.TransactionContext] - Began transaction (1) for test context [DefaultTestContext@3ad8717d testClass = UpdateTest, testInstance = com.javateam.springTransaction.test.UpdateTest@4293e066, testMethod = testTransaction@UpdateTest, testException = [null], mergedContextConfiguration = [WebMergedContextConfiguration@d13960e testClass = UpdateTest, locations = '{file:src/main/webapp/WEB-INF/spring/appServlet/servlet-context.xml, file:src/main/resources/spring/root-context.xml}', classes = '{}', contextInitializerClasses = '[]', activeProfiles = '{}', propertySourceLocations = '{}', propertySourceProperties = '{}', contextCustomizers = set[[empty]], resourceBasePath = 'src/main/webapp', contextLoader = 'org.springframework.test.context.web.WebDelegatingSmartContextLoader', parent = [null]], attributes = map['org.springframework.test.context.web.ServletTestExecutionListener.populatedRequestContextHolder' -> true, 'org.springframework.test.context.web.ServletTestExecutionListener.resetRequestContextHolder' -> true]]; transaction manager [org.springframework.jdbc.datasource.DataSourceTransactionManager@4eaa375c]; rollback [false]
+2023-09-05 11:32:32 [INFO ] [main] [c.j.s.test.UpdateTest] - ######### 트랜잭션 update 테스트 ##############
+2023-09-05 11:32:32 [INFO ] [main] [c.j.s.dao.TransactionDAOMyBatisImpl] - dao updateMember
+2023-09-05 11:32:32 [DEBUG] [main] [c.j.s.m.MemberMapper.updateMember] - ==>  Preparing: UPDATE member_temp2 SET pw=?, name=?, address=? WHERE id=?
+2023-09-05 11:32:32 [DEBUG] [main] [c.j.s.m.MemberMapper.updateMember] - ==> Parameters: abcd1234(String), 자바맨(String), 구로(String), spring1234(String)
+2023-09-05 11:32:32 [INFO ] [main] [o.s.t.c.t.TransactionContext] - Committed transaction for test: [DefaultTestContext@3ad8717d testClass = UpdateTest, testInstance = com.javateam.springTransaction.test.UpdateTest@4293e066, testMethod = testTransaction@UpdateTest, testException = org.springframework.jdbc.BadSqlGrammarException: 
+### Error updating database.  Cause: java.sql.SQLSyntaxErrorException: ORA-00942: table or view does not exist
+
+### The error may exist in file [C:\heejin\works\spring2\springTransaction\target\classes\mapper\MemberMapper.xml]
+### The error may involve com.javateam.springTransaction.mapper.MemberMapper.updateMember-Inline
+### The error occurred while setting parameters
+### SQL: UPDATE member_temp2 SET       pw=?,      name=?,      address=?       WHERE id=?
+### Cause: java.sql.SQLSyntaxErrorException: ORA-00942: table or view does not exist
+
+; bad SQL grammar []; nested exception is java.sql.SQLSyntaxErrorException: ORA-00942: table or view does not exist
+, mergedContextConfiguration = [WebMergedContextConfiguration@d13960e testClass = UpdateTest, locations = '{file:src/main/webapp/WEB-INF/spring/appServlet/servlet-context.xml, file:src/main/resources/spring/root-context.xml}', classes = '{}', contextInitializerClasses = '[]', activeProfiles = '{}', propertySourceLocations = '{}', propertySourceProperties = '{}', contextCustomizers = set[[empty]], resourceBasePath = 'src/main/webapp', contextLoader = 'org.springframework.test.context.web.WebDelegatingSmartContextLoader', parent = [null]], attributes = map['org.springframework.test.context.web.ServletTestExecutionListener.populatedRequestContextHolder' -> true, 'org.springframework.test.context.web.ServletTestExecutionListener.resetRequestContextHolder' -> true]]
+2023-09-05 11:32:32 [INFO ] [SpringContextShutdownHook] [jdbc.connection] - 2. Connection closed  org.apache.commons.dbcp2.DelegatingConnection.closeInternal(DelegatingConnection.java:176)
+2023-09-05 11:32:32 [DEBUG] [SpringContextShutdownHook] [jdbc.connection] - open connections:  none

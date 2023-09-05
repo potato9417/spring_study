@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" 
+		 "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.javateam.springTransaction.mapper.MemberMapper">
+
+	<insert id="insertMember" parameterType="com.javateam.springTransaction.domain.MemberVO">
+		INSERT INTO member_temp2
+			VALUES (#{id}, 
+					#{pw}, 
+					#{name}, 
+					#{address}, 
+					#{joindate})
+	</insert>
+	
+	<update id="updateMember" 
+			parameterType="com.javateam.springTransaction.domain.MemberVO">
+		UPDATE member_temp2 SET 
+		   pw=#{pw},
+		   name=#{name},
+		   address=#{address} 
+	    WHERE id=#{id}
+	</update>
+	
+	<delete id="deleteMember"
+			parameterType="String">
+		DELETE member_temp2 WHERE id=#{id}		
+	</delete>
+	
+	<select id="getMember" 
+			parameterType="String"
+			resultType="com.javateam.springTransaction.domain.MemberVO">
+		SELECT * FROM member_temp2 WHERE id=#{id}	 
+	</select>
+	
+	<select id="getAllMembers" 
+			resultType="com.javateam.springTransaction.domain.MemberVO">
+		SELECT * FROM member_temp2	 
+	</select>
+	
+</mapper>

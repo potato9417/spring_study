@@ -1,0 +1,79 @@
+2023-09-05 12:56:13 [INFO ] [main] [jdbc.connection] - 1. Connection opened  org.apache.commons.dbcp2.DriverConnectionFactory.createConnection(DriverConnectionFactory.java:52)
+2023-09-05 12:56:13 [DEBUG] [main] [jdbc.connection] - open connections:  1 (1)
+2023-09-05 12:56:13 [INFO ] [main] [jdbc.connection] - 1. Connection closed  org.apache.commons.dbcp2.DelegatingConnection.closeInternal(DelegatingConnection.java:176)
+2023-09-05 12:56:13 [DEBUG] [main] [jdbc.connection] - open connections:  none
+2023-09-05 12:56:13 [INFO ] [main] [jdbc.connection] - 2. Connection opened  org.apache.commons.dbcp2.DriverConnectionFactory.createConnection(DriverConnectionFactory.java:52)
+2023-09-05 12:56:13 [DEBUG] [main] [jdbc.connection] - open connections:  2 (1)
+2023-09-05 12:56:13 [INFO ] [main] [o.s.t.c.t.TransactionContext] - Began transaction (1) for test context [DefaultTestContext@69d3cf7e testClass = InsertTest, testInstance = com.javateam.springTransaction.test.InsertTest@3a3ed300, testMethod = testTransaction@InsertTest, testException = [null], mergedContextConfiguration = [WebMergedContextConfiguration@1984212d testClass = InsertTest, locations = '{file:src/main/webapp/WEB-INF/spring/appServlet/servlet-context.xml, file:src/main/resources/spring/root-context.xml}', classes = '{}', contextInitializerClasses = '[]', activeProfiles = '{}', propertySourceLocations = '{}', propertySourceProperties = '{}', contextCustomizers = set[[empty]], resourceBasePath = 'src/main/webapp', contextLoader = 'org.springframework.test.context.web.WebDelegatingSmartContextLoader', parent = [null]], attributes = map['org.springframework.test.context.web.ServletTestExecutionListener.populatedRequestContextHolder' -> true, 'org.springframework.test.context.web.ServletTestExecutionListener.resetRequestContextHolder' -> true]]; transaction manager [org.springframework.jdbc.datasource.DataSourceTransactionManager@39f5b723]; rollback [true]
+2023-09-05 12:56:13 [INFO ] [main] [c.j.s.test.InsertTest] - ######### 트랜잭션 insert 테스트 ##############
+2023-09-05 12:56:13 [INFO ] [main] [c.j.s.dao.TransactionDAOMyBatisImpl] - dao insertMember
+2023-09-05 12:56:13 [DEBUG] [main] [c.j.s.m.MemberMapper.insertMember] - ==>  Preparing: INSERT INTO member_temp2 VALUES (?, ?, ?, ?, ?)
+2023-09-05 12:56:13 [DEBUG] [main] [c.j.s.m.MemberMapper.insertMember] - ==> Parameters: spring1234(String), 11111111(String), 스프링맨(String), 구로디지털단지(String), 2023-09-05(Date)
+2023-09-05 12:56:13 [INFO ] [main] [o.s.t.c.t.TransactionContext] - Rolled back transaction for test: [DefaultTestContext@69d3cf7e testClass = InsertTest, testInstance = com.javateam.springTransaction.test.InsertTest@3a3ed300, testMethod = testTransaction@InsertTest, testException = org.springframework.dao.DuplicateKeyException: 
+### Error updating database.  Cause: java.sql.SQLIntegrityConstraintViolationException: ORA-00001: unique constraint (JAVA.SYS_C007040) violated
+
+### The error may exist in file [C:\heejin\works\spring2\springTransaction\target\classes\mapper\MemberMapper.xml]
+### The error may involve com.javateam.springTransaction.mapper.MemberMapper.insertMember-Inline
+### The error occurred while setting parameters
+### SQL: INSERT INTO member_temp2    VALUES (?,       ?,       ?,       ?,       ?)
+### Cause: java.sql.SQLIntegrityConstraintViolationException: ORA-00001: unique constraint (JAVA.SYS_C007040) violated
+
+; ORA-00001: unique constraint (JAVA.SYS_C007040) violated
+; nested exception is java.sql.SQLIntegrityConstraintViolationException: ORA-00001: unique constraint (JAVA.SYS_C007040) violated
+, mergedContextConfiguration = [WebMergedContextConfiguration@1984212d testClass = InsertTest, locations = '{file:src/main/webapp/WEB-INF/spring/appServlet/servlet-context.xml, file:src/main/resources/spring/root-context.xml}', classes = '{}', contextInitializerClasses = '[]', activeProfiles = '{}', propertySourceLocations = '{}', propertySourceProperties = '{}', contextCustomizers = set[[empty]], resourceBasePath = 'src/main/webapp', contextLoader = 'org.springframework.test.context.web.WebDelegatingSmartContextLoader', parent = [null]], attributes = map['org.springframework.test.context.web.ServletTestExecutionListener.populatedRequestContextHolder' -> true, 'org.springframework.test.context.web.ServletTestExecutionListener.resetRequestContextHolder' -> true]]
+2023-09-05 12:56:13 [INFO ] [SpringContextShutdownHook] [jdbc.connection] - 2. Connection closed  org.apache.commons.dbcp2.DelegatingConnection.closeInternal(DelegatingConnection.java:176)
+2023-09-05 12:56:13 [DEBUG] [SpringContextShutdownHook] [jdbc.connection] - open connections:  none
+2023-09-05 12:56:35 [INFO ] [main] [o.s.t.c.w.WebTestContextBootstrapper] - Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener, org.springframework.test.context.event.EventPublishingTestExecutionListener]
+2023-09-05 12:56:35 [INFO ] [main] [o.s.t.c.w.WebTestContextBootstrapper] - Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@4dc27487, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@6a4f1a55, org.springframework.test.context.support.DependencyInjectionTestExecutionListener@7dfd3c81, org.springframework.test.context.support.DirtiesContextTestExecutionListener@2584b82d, org.springframework.test.context.transaction.TransactionalTestExecutionListener@7bbc8656, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@6933b6c6, org.springframework.test.context.event.EventPublishingTestExecutionListener@7d3e8655]
+2023-09-05 12:56:36 [DEBUG] [main] [log4jdbc.debug] - log4jdbc-logj2 properties initialization...
+2023-09-05 12:56:36 [DEBUG] [main] [log4jdbc.debug] - Using logger: net.sf.log4jdbc.log.slf4j.Slf4jSpyLogDelegator
+2023-09-05 12:56:36 [DEBUG] [main] [log4jdbc.debug] - x log4jdbc.debug.stack.prefix is not defined
+2023-09-05 12:56:36 [DEBUG] [main] [log4jdbc.debug] - x log4jdbc.sqltiming.warn.threshold is not defined
+2023-09-05 12:56:36 [DEBUG] [main] [log4jdbc.debug] - x log4jdbc.sqltiming.error.threshold is not defined
+2023-09-05 12:56:36 [DEBUG] [main] [log4jdbc.debug] - x log4jdbc.dump.booleanastruefalse is not defined (using default value false)
+2023-09-05 12:56:36 [DEBUG] [main] [log4jdbc.debug] - x log4jdbc.dump.sql.maxlinelength is not defined (using default of 90)
+2023-09-05 12:56:36 [DEBUG] [main] [log4jdbc.debug] - x log4jdbc.dump.fulldebugstacktrace is not defined (using default value false)
+2023-09-05 12:56:36 [DEBUG] [main] [log4jdbc.debug] - x log4jdbc.statement.warn is not defined (using default value false)
+2023-09-05 12:56:36 [DEBUG] [main] [log4jdbc.debug] - x log4jdbc.dump.sql.select is not defined (using default value true)
+2023-09-05 12:56:36 [DEBUG] [main] [log4jdbc.debug] - x log4jdbc.dump.sql.insert is not defined (using default value true)
+2023-09-05 12:56:36 [DEBUG] [main] [log4jdbc.debug] - x log4jdbc.dump.sql.update is not defined (using default value true)
+2023-09-05 12:56:36 [DEBUG] [main] [log4jdbc.debug] - x log4jdbc.dump.sql.delete is not defined (using default value true)
+2023-09-05 12:56:36 [DEBUG] [main] [log4jdbc.debug] - x log4jdbc.dump.sql.create is not defined (using default value true)
+2023-09-05 12:56:36 [DEBUG] [main] [log4jdbc.debug] - x log4jdbc.dump.sql.addsemicolon is not defined (using default value false)
+2023-09-05 12:56:36 [DEBUG] [main] [log4jdbc.debug] - x log4jdbc.auto.load.popular.drivers is not defined (using default value true)
+2023-09-05 12:56:36 [DEBUG] [main] [log4jdbc.debug] - x log4jdbc.drivers is not defined
+2023-09-05 12:56:36 [DEBUG] [main] [log4jdbc.debug] - x log4jdbc.trim.sql is not defined (using default value true)
+2023-09-05 12:56:36 [DEBUG] [main] [log4jdbc.debug] - x log4jdbc.trim.sql.extrablanklines is not defined (using default value true)
+2023-09-05 12:56:36 [DEBUG] [main] [log4jdbc.debug] - x log4jdbc.suppress.generated.keys.exception is not defined (using default value false)
+2023-09-05 12:56:36 [DEBUG] [main] [log4jdbc.debug] - log4jdbc-logj2 properties initialization done.
+2023-09-05 12:56:36 [DEBUG] [main] [log4jdbc.debug] - DriverSpy intialization...
+2023-09-05 12:56:37 [DEBUG] [main] [log4jdbc.debug] -   FOUND DRIVER oracle.jdbc.OracleDriver
+2023-09-05 12:56:37 [DEBUG] [main] [log4jdbc.debug] -   FOUND DRIVER oracle.jdbc.driver.OracleDriver
+2023-09-05 12:56:37 [DEBUG] [main] [log4jdbc.debug] - DriverSpy intialization done.
+2023-09-05 12:56:37 [INFO ] [main] [jdbc.connection] - 1. Connection opened  org.apache.commons.dbcp2.DriverConnectionFactory.createConnection(DriverConnectionFactory.java:52)
+2023-09-05 12:56:37 [DEBUG] [main] [jdbc.connection] - open connections:  1 (1)
+2023-09-05 12:56:37 [INFO ] [main] [jdbc.connection] - 1. Connection closed  org.apache.commons.dbcp2.DelegatingConnection.closeInternal(DelegatingConnection.java:176)
+2023-09-05 12:56:37 [DEBUG] [main] [jdbc.connection] - open connections:  none
+2023-09-05 12:56:37 [INFO ] [main] [jdbc.connection] - 2. Connection opened  org.apache.commons.dbcp2.DriverConnectionFactory.createConnection(DriverConnectionFactory.java:52)
+2023-09-05 12:56:37 [DEBUG] [main] [jdbc.connection] - open connections:  2 (1)
+2023-09-05 12:56:37 [INFO ] [main] [o.s.t.c.t.TransactionContext] - Began transaction (1) for test context [DefaultTestContext@46dcbeab testClass = InsertTest, testInstance = com.javateam.springTransaction.test.InsertTest@36e43829, testMethod = testTransaction@InsertTest, testException = [null], mergedContextConfiguration = [WebMergedContextConfiguration@152c4495 testClass = InsertTest, locations = '{file:src/main/webapp/WEB-INF/spring/appServlet/servlet-context.xml, file:src/main/resources/spring/root-context.xml}', classes = '{}', contextInitializerClasses = '[]', activeProfiles = '{}', propertySourceLocations = '{}', propertySourceProperties = '{}', contextCustomizers = set[[empty]], resourceBasePath = 'src/main/webapp', contextLoader = 'org.springframework.test.context.web.WebDelegatingSmartContextLoader', parent = [null]], attributes = map['org.springframework.test.context.web.ServletTestExecutionListener.populatedRequestContextHolder' -> true, 'org.springframework.test.context.web.ServletTestExecutionListener.resetRequestContextHolder' -> true]]; transaction manager [org.springframework.jdbc.datasource.DataSourceTransactionManager@5ec1963c]; rollback [false]
+2023-09-05 12:56:37 [INFO ] [main] [c.j.s.test.InsertTest] - ######### 트랜잭션 insert 테스트 ##############
+2023-09-05 12:56:37 [INFO ] [main] [c.j.s.dao.TransactionDAOMyBatisImpl] - dao insertMember
+2023-09-05 12:56:37 [DEBUG] [main] [c.j.s.m.MemberMapper.insertMember] - ==>  Preparing: INSERT INTO member_temp2 VALUES (?, ?, ?, ?, ?)
+2023-09-05 12:56:38 [DEBUG] [main] [c.j.s.m.MemberMapper.insertMember] - ==> Parameters: spring1234(String), 11111111(String), 스프링맨(String), 구로디지털단지(String), 2023-09-05(Date)
+2023-09-05 12:56:38 [INFO ] [main] [o.s.t.c.t.TransactionContext] - Committed transaction for test: [DefaultTestContext@46dcbeab testClass = InsertTest, testInstance = com.javateam.springTransaction.test.InsertTest@36e43829, testMethod = testTransaction@InsertTest, testException = org.springframework.dao.DuplicateKeyException: 
+### Error updating database.  Cause: java.sql.SQLIntegrityConstraintViolationException: ORA-00001: unique constraint (JAVA.SYS_C007040) violated
+
+### The error may exist in file [C:\heejin\works\spring2\springTransaction\target\classes\mapper\MemberMapper.xml]
+### The error may involve com.javateam.springTransaction.mapper.MemberMapper.insertMember-Inline
+### The error occurred while setting parameters
+### SQL: INSERT INTO member_temp2    VALUES (?,       ?,       ?,       ?,       ?)
+### Cause: java.sql.SQLIntegrityConstraintViolationException: ORA-00001: unique constraint (JAVA.SYS_C007040) violated
+
+; ORA-00001: unique constraint (JAVA.SYS_C007040) violated
+; nested exception is java.sql.SQLIntegrityConstraintViolationException: ORA-00001: unique constraint (JAVA.SYS_C007040) violated
+, mergedContextConfiguration = [WebMergedContextConfiguration@152c4495 testClass = InsertTest, locations = '{file:src/main/webapp/WEB-INF/spring/appServlet/servlet-context.xml, file:src/main/resources/spring/root-context.xml}', classes = '{}', contextInitializerClasses = '[]', activeProfiles = '{}', propertySourceLocations = '{}', propertySourceProperties = '{}', contextCustomizers = set[[empty]], resourceBasePath = 'src/main/webapp', contextLoader = 'org.springframework.test.context.web.WebDelegatingSmartContextLoader', parent = [null]], attributes = map['org.springframework.test.context.web.ServletTestExecutionListener.populatedRequestContextHolder' -> true, 'org.springframework.test.context.web.ServletTestExecutionListener.resetRequestContextHolder' -> true]]
+2023-09-05 12:56:38 [INFO ] [SpringContextShutdownHook] [jdbc.connection] - 2. Connection closed  org.apache.commons.dbcp2.DelegatingConnection.closeInternal(DelegatingConnection.java:176)
+2023-09-05 12:56:38 [DEBUG] [SpringContextShutdownHook] [jdbc.connection] - open connections:  none
+2023-09-05 12:57:13 [INFO ] [main] [o.s.t.c.w.WebTestContextBootstrapper] - Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener, org.springframework.test.context.event.EventPublishingTestExecutionListener]
+2023-09-05 12:57:13 [INFO ] [main] [o.s.t.c.w.WebTestContextBootstrapper] - Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@4dc27487, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@6a4f1a55, org.springframework.test.context.support.DependencyInjectionTestExecutionListener@7dfd3c81, org.springframework.test.context.support.DirtiesContextTestExecutionListener@2584b82d, org.springframework.test.context.transaction.TransactionalTestExecutionListener@7bbc8656, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@6933b6c6, org.springframework.test.context.event.EventPublishingTestExecutionListener@7d3e8655]
