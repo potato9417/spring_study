@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+	 PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+	 "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.javateam.myBatisTransactionSample.domain.EmployeesMapper">
+
+	 <resultMap type="com.javateam.myBatisTransactionSample.domain.Employees" id="EmployeesResult">
+		 <result property="employeeId" column="EMPLOYEE_ID" />
+		 <result property="firstName" column="FIRST_NAME" />
+		 <result property="lastName" column="LAST_NAME" />
+		 <result property="email" column="EMAIL" />
+		 <result property="phoneNumber" column="PHONE_NUMBER" />
+		 <result property="hireDate" column="HIRE_DATE" />
+		 <result property="jobId" column="JOB_ID" />
+		 <result property="salary" column="SALARY" />	
+		 <result property="commissionPct" column="COMMISSION_PCT" />		
+		 <result property="managerId" column="MANAGER_ID" />		
+		 <result property="departmentId" column="DEPARTMENT_ID" />															
+	 </resultMap>
+
+	 <select id="dummy" resultType="String">
+         select sysdate from dual
+	 </select>
+
+	 <select id="getEmployeesList" resultMap="EmployeesResult">
+		 SELECT * FROM EMPLOYEES ORDER BY EMPLOYEE_ID
+	 </select>
+	 
+	 <select id="getMember" 
+	 		 parameterType="int" 
+	 		 resultMap="EmployeesResult">
+	 	select * from Employees 
+	 		where employee_id = #{employeeId}		 
+	 </select>
+
+	 <!-- 추가 -->
+	 <insert id="insertMember" parameterType="com.javateam.myBatisTransactionSample.domain.Employees">
+		 INSERT INTO employees VALUES 
+		 (#{employeeId},
+		  #{firstName},
+		  #{lastName},
+		  #{email},
+		  #{phoneNumber},
+		  #{hireDate},
+		  #{jobId},
+		  #{salary},
+		  #{commissionPct},
+		  #{managerId},
+		  #{departmentId})
+	 </insert>
+</mapper>
